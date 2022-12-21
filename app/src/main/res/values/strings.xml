@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Travel Agency</string>
+    <string name="head_title">Special Offerings</string>
+    <string name="country_name">Brazil</string>
 </resources>
