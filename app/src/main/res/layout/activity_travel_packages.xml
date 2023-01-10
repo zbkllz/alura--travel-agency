@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="@string/head_title"
-        android:textSize="24sp"
         android:textColor="@color/white"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -39,9 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/country_name"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/tv_travel_header_offering"
         app:layout_constraintTop_toBottomOf="@+id/tv_travel_header_offering" />
 
@@ -49,6 +49,7 @@
         android:id="@+id/lv_travel_pkg"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:divider="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
