@@ -13,7 +13,21 @@
         android:theme="@style/Theme.TravelAgency"
         tools:targetApi="31">
         <activity
-            android:name="com.alura.travelagency.ui.activity.TravelPackagesActivity"
+            android:name=".ui.activity.PaymentActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activity.ResumePackageActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activity.TravelPackagesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

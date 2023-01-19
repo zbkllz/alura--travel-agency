@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ResumePackageActivity">
+
+    <ImageView
+        android:id="@+id/iv_resume_pkg"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sao_paulo_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription" />
+    <View
+        android:id="@+id/v_item_div"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@android:color/holo_orange_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_resume_pkg"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <TextView
+        android:id="@+id/tv_resume_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_resume_pkg"
+        tools:text="São Paulo" />
+
+    <TextView
+        android:id="@+id/tv_resume_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_resume_place"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resume_place"
+        tools:text="2 days" />
+
+    <TextView
+        android:id="@+id/tv_resume_dates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_resume_days"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resume_days"
+        tools:text="08/12 - 10/12 in 2023" />
+
+    <TextView
+        android:id="@+id/tv_resume_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price_deal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_resume_price_value"
+        app:layout_constraintEnd_toEndOf="@+id/tv_resume_price_value" />
+
+    <TextView
+        android:id="@+id/tv_resume_price_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="#43A047"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_resume_dates"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="R$ 243,99" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_resume_purchase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_orange"
+        android:text="@string/purchase"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_resume_pkg"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

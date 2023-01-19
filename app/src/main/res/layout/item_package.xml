@@ -6,7 +6,6 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cd_item_pkg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
@@ -83,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:textColor="@android:color/holo_green_dark"
+                android:textColor="#43A047"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tv_item_period"

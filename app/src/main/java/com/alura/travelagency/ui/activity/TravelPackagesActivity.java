@@ -1,5 +1,6 @@
 package com.alura.travelagency.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -23,6 +24,9 @@ public class TravelPackagesActivity extends AppCompatActivity {
 
         setTitle(TITLE_APPBAR);
         listConfig();
+
+        Intent intent = new Intent(this, ResumePackageActivity.class);
+        startActivity(intent);
     }
 
     private void listConfig() {
