@@ -4,4 +4,12 @@
     <string name="country_name">Brazil</string>
     <string name="purchase">Purchase</string>
     <string name="price_deal">Price deal:</string>
+    <string name="warning_checkout">To finalize your purchase, please complete your payment using a valid credit card</string>
+    <string name="summary">You\'ve to pay:</string>
+    <string name="cardholder_name">Cardholder Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="finish_payment">Finish payment</string>
+    <string name="yy">YY</string>
+    <string name="mm">MM</string>
+    <string name="cvc">CVC</string>
 </resources>
