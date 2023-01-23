@@ -6,12 +6,16 @@ import java.util.Locale;
 
 public class CurrencyUtil {
 
-    public static final String LANGUAGE = "en";
-    public static final String REGION = "us";
+    public static final String LANGUAGE = "pt";
+    public static final String REGION = "br";
+    public static final String STANDARD_US = "R$";
+    public static final String STANDARD_BR = "R$ ";
 
-    public static String formatModelCurrency(BigDecimal value) {
-        NumberFormat usFormat = NumberFormat.getCurrencyInstance(new Locale(LANGUAGE, REGION));
-        return usFormat.format(value);
+    public static String formattingModelCurrency(BigDecimal value) {
+        NumberFormat brlFormat = NumberFormat.getCurrencyInstance(
+                new Locale(LANGUAGE, REGION));
+        return brlFormat
+                .format(value)
+                .replace(STANDARD_US, STANDARD_BR);
     }
 }
-

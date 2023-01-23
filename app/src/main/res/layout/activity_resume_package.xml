@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="ContentDescription" />
+
     <View
         android:id="@+id/v_item_div"
         android:layout_width="0dp"
@@ -51,31 +52,35 @@
         tools:text="2 days" />
 
     <TextView
-        android:id="@+id/tv_resume_dates"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_resume_duration"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_resume_price"
         app:layout_constraintStart_toStartOf="@+id/tv_resume_days"
         app:layout_constraintTop_toBottomOf="@+id/tv_resume_days"
         tools:text="08/12 - 10/12 in 2023" />
 
     <TextView
-        android:id="@+id/tv_resume_price"
+        android:id="@+id/tv_resume_pricing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/price_deal"
-        app:layout_constraintBottom_toTopOf="@+id/tv_resume_price_value"
-        app:layout_constraintEnd_toEndOf="@+id/tv_resume_price_value" />
+        app:layout_constraintBottom_toTopOf="@+id/tv_resume_price"
+        app:layout_constraintEnd_toEndOf="@+id/tv_resume_price" />
 
     <TextView
-        android:id="@+id/tv_resume_price_value"
+        android:id="@+id/tv_resume_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:textColor="#43A047"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_resume_dates"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_resume_duration"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_resume_duration"
         tools:text="R$ 243,99" />
 
     <androidx.appcompat.widget.AppCompatButton

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.alura.travelagency.R;
 import com.alura.travelagency.dao.PackageDAO;
-import com.alura.travelagency.model.PackageDeal;
+import com.alura.travelagency.model.TripPackage;
 import com.alura.travelagency.ui.adapter.PackagesListAdapter;
 
 import java.util.List;
@@ -31,7 +31,7 @@ public class TravelPackagesActivity extends AppCompatActivity {
 
     private void listConfig() {
         ListView packagesList = findViewById(R.id.lv_travel_pkg);
-        List<PackageDeal> packagesDeals = new PackageDAO().list();
+        List<TripPackage> packagesDeals = new PackageDAO().list();
         packagesList.setAdapter(new PackagesListAdapter(packagesDeals, this));
     }
 }

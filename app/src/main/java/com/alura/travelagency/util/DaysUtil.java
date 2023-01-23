@@ -8,7 +8,7 @@ public class DaysUtil {
     public static final String ONE = " day";
 
     @NonNull
-    public static String formatToTxt(int periodLength) {
+    public static String formattingToTxt(int periodLength) {
         if (periodLength > 1) {
             return periodLength + PLURAL;
         }

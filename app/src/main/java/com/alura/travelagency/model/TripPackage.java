@@ -2,16 +2,16 @@ package com.alura.travelagency.model;
 
 import java.math.BigDecimal;
 
-public class PackageDeal {
+public class TripPackage {
     private final String place;
     private final String image;
-    private final int period;
+    private final int days;
     private final BigDecimal price;
 
-    public PackageDeal(String place, String image, int period, BigDecimal price) {
+    public TripPackage(String place, String image, int days, BigDecimal price) {
         this.place = place;
         this.image = image;
-        this.period = period;
+        this.days = days;
         this.price = price;
     }
 
@@ -23,8 +23,8 @@ public class PackageDeal {
         return image;
     }
 
-    public int getPeriod() {
-        return period;
+    public int getDays() {
+        return days;
     }
 
     public BigDecimal getPrice() {

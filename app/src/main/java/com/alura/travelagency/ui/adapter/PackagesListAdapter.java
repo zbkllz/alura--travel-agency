@@ -13,29 +13,29 @@ import com.alura.travelagency.util.CurrencyUtil;
 import com.alura.travelagency.util.DaysUtil;
 import com.alura.travelagency.R;
 import com.alura.travelagency.util.ResUtil;
-import com.alura.travelagency.model.PackageDeal;
+import com.alura.travelagency.model.TripPackage;
 
 import java.util.List;
 
 public class PackagesListAdapter extends BaseAdapter {
 
-    private final List<PackageDeal> packageDeals;
+    private final List<TripPackage> tripPackages;
     private final Context context;
 
-    public PackagesListAdapter(List<PackageDeal> packageDeals, Context context) {
+    public PackagesListAdapter(List<TripPackage> tripPackages, Context context) {
 
-        this.packageDeals = packageDeals;
+        this.tripPackages = tripPackages;
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return packageDeals.size();
+        return tripPackages.size();
     }
 
     @Override
-    public PackageDeal getItem(int position) {
-        return packageDeals.get(position);
+    public TripPackage getItem(int position) {
+        return tripPackages.get(position);
     }
 
     @Override
@@ -48,37 +48,37 @@ public class PackagesListAdapter extends BaseAdapter {
         View createdView = LayoutInflater.from(context)
                 .inflate(R.layout.item_package, parent, false);
 
-        PackageDeal packageDeal = packageDeals.get(position);
+        TripPackage tripPackage = this.tripPackages.get(position);
 
-        showPlace(createdView, packageDeal);
-        showImage(createdView, packageDeal);
-        showDays(createdView, packageDeal);
-        showPrices(createdView, packageDeal);
+        showPlace(createdView, tripPackage);
+        showImage(createdView, tripPackage);
+        showDays(createdView, tripPackage);
+        showPrices(createdView, tripPackage);
 
         return createdView;
     }
 
-    private void showPrices(View createdView, PackageDeal packageDeal) {
+    private void showPrices(View createdView, TripPackage tripPackage) {
         TextView price = createdView.findViewById(R.id.tv_item_price);
-        String usd = CurrencyUtil.formatModelCurrency(packageDeal.getPrice());
+        String usd = CurrencyUtil.formattingModelCurrency(tripPackage.getPrice());
         price.setText(usd);
     }
 
-    private void showDays(View createdView, PackageDeal packageDeal) {
+    private void showDays(View createdView, TripPackage tripPackage) {
         TextView period = createdView.findViewById(R.id.tv_item_period);
-        String periodAsTxt = DaysUtil.formatToTxt(packageDeal.getPeriod());
+        String periodAsTxt = DaysUtil.formattingToTxt(tripPackage.getDays());
         period.setText(periodAsTxt);
     }
 
-    private void showImage(View createdView, PackageDeal packageDeal) {
+    private void showImage(View createdView, TripPackage tripPackage) {
         ImageView image = createdView.findViewById(R.id.iv_item_place_pkg);
         Drawable drawableImagePkg = ResUtil
-                .returnDrawable(context, packageDeal.getImage());
+                .returnDrawable(context, tripPackage.getImage());
         image.setImageDrawable(drawableImagePkg);
     }
 
-    private void showPlace(View createdView, PackageDeal packageDeal) {
+    private void showPlace(View createdView, TripPackage tripPackage) {
         TextView place = createdView.findViewById(R.id.tv_item_place);
-        place.setText(packageDeal.getPlace());
+        place.setText(tripPackage.getPlace());
     }
 }
