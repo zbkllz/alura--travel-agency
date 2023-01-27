@@ -1,6 +1,6 @@
 {
-  "place": "São Paulo",
-  "image": "@drawable/sao_paulo_sp",
+  "destination": "São Paulo",
+  "banner": "@drawable/sao_paulo_sp",
   "period": "2 dias",
   "price": "R$ 243,99"
 }

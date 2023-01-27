@@ -1,38 +1,38 @@
 {
   "packages": [
     {
-      "place": "São Paulo",
-      "image": "@drawable/sao_paulo_sp",
+      "destination": "São Paulo",
+      "banner": "@drawable/sao_paulo_sp",
       "period": "2 dias",
       "price": "R$ 243,99"
     },
     {
-      "place": "Belo Horizonte",
-      "image": "@drawable/belo_horizonte_mg",
+      "destination": "Belo Horizonte",
+      "banner": "@drawable/belo_horizonte_mg",
       "period": "3 dias",
       "price": "R$ 421,50"
     },
     {
-      "place": "Recife",
-      "image": "@drawable/recife_pe",
+      "destination": "Recife",
+      "banner": "@drawable/recife_pe",
       "period": "4 dias",
       "price": "R$ 754,20"
     },
     {
-      "place": "Rio de Janeiro",
-      "image": "@drawable/rio_de_janeiro_rj",
+      "destination": "Rio de Janeiro",
+      "banner": "@drawable/rio_de_janeiro_rj",
       "period": "6 dias",
       "price": "R$ 532,55"
     },
     {
-      "place": "Salvador",
-      "image": "@drawable/salvador_ba",
+      "destination": "Salvador",
+      "banner": "@drawable/salvador_ba",
       "period": "5 dias",
       "price": "R$ 899,99"
     },
     {
-      "place": "Foz do Iguaçu",
-      "image": "@drawable/foz_do_iguacu_pr",
+      "destination": "Foz do Iguaçu",
+      "banner": "@drawable/foz_do_iguacu_pr",
       "period": "1 dia",
       "price": "R$ 289,90"
     }

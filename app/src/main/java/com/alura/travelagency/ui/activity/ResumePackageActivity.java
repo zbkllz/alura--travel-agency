@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alura.travelagency.R;
@@ -16,8 +15,6 @@ import com.alura.travelagency.util.DaysUtil;
 import com.alura.travelagency.util.ResUtil;
 
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class ResumePackageActivity extends AppCompatActivity {
 
@@ -33,7 +30,7 @@ public class ResumePackageActivity extends AppCompatActivity {
         TripPackage pkgSp = new TripPackage("São Paulo", "sao_paulo_sp", 2,
                 new BigDecimal("243.99"));
 
-        showPlace(pkgSp);
+        showDestination(pkgSp);
         showPlaceImg(pkgSp);
         showDays(pkgSp);
         showPrice(pkgSp);
@@ -59,13 +56,13 @@ public class ResumePackageActivity extends AppCompatActivity {
     }
 
     private void showPlaceImg(TripPackage aPkg) {
-        ImageView image = findViewById(R.id.iv_resume_pkg);
-        Drawable drawablePkg = ResUtil.returnDrawable(this, aPkg.getImage());
+        ImageView image = findViewById(R.id.iv_resume_pkg_banner);
+        Drawable drawablePkg = ResUtil.returnDrawable(this, aPkg.getBanner());
         image.setImageDrawable((drawablePkg));
     }
 
-    private void showPlace(TripPackage aPkg) {
+    private void showDestination(TripPackage aPkg) {
         TextView place = findViewById(R.id.tv_resume_place);
-        place.setText((aPkg.getPlace()));
+        place.setText((aPkg.getDestination()));
     }
 }

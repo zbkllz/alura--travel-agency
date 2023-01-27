@@ -30,7 +30,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription"
-                tools:src="@sample/itempackages.json/packages/image" />
+                tools:src="@sample/itempackages.json/packages/banner" />
 
             <TextView
                 android:id="@+id/tv_item_place"
@@ -50,7 +50,7 @@
                 app:layout_constraintVertical_bias="1.0"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="57dp"
-                tools:text="@sample/itempackages.json/packages/place" />
+                tools:text="@sample/itempackages.json/packages/destination" />
 
             <View
                 android:id="@+id/v_item_div"

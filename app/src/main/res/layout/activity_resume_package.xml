@@ -3,21 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.activity.ResumePackageActivity">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/iv_resume_pkg"
+        android:id="@+id/iv_resume_pkg_banner"
         android:layout_width="0dp"
         android:layout_height="140dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/sao_paulo_sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/sao_paulo_sp" />
 
     <View
         android:id="@+id/v_item_div"
@@ -26,19 +25,18 @@
         android:background="@android:color/holo_orange_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_resume_pkg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_resume_pkg_banner"
         tools:layout_editor_absoluteY="100dp" />
 
     <TextView
         android:id="@+id/tv_resume_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="8dp"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_resume_pkg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_resume_pkg_banner"
         tools:text="São Paulo" />
 
     <TextView
@@ -63,7 +61,6 @@
         tools:text="08/12 - 10/12 in 2023" />
 
     <TextView
-        android:id="@+id/tv_resume_pricing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/price_deal"
@@ -84,13 +81,9 @@
         tools:text="R$ 243,99" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_resume_purchase"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="8dp"
         android:background="@drawable/btn_orange"
         android:text="@string/purchase"
         android:textColor="@color/white"
@@ -99,7 +92,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iv_resume_pkg"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -73,12 +73,12 @@ public class PackagesListAdapter extends BaseAdapter {
     private void showImage(View createdView, TripPackage tripPackage) {
         ImageView image = createdView.findViewById(R.id.iv_item_place_pkg);
         Drawable drawableImagePkg = ResUtil
-                .returnDrawable(context, tripPackage.getImage());
+                .returnDrawable(context, tripPackage.getBanner());
         image.setImageDrawable(drawableImagePkg);
     }
 
     private void showPlace(View createdView, TripPackage tripPackage) {
         TextView place = createdView.findViewById(R.id.tv_item_place);
-        place.setText(tripPackage.getPlace());
+        place.setText(tripPackage.getDestination());
     }
 }

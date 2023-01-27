@@ -3,24 +3,24 @@ package com.alura.travelagency.model;
 import java.math.BigDecimal;
 
 public class TripPackage {
-    private final String place;
-    private final String image;
+    private final String destination;
+    private final String banner;
     private final int days;
     private final BigDecimal price;
 
-    public TripPackage(String place, String image, int days, BigDecimal price) {
-        this.place = place;
-        this.image = image;
+    public TripPackage(String destination, String banner, int days, BigDecimal price) {
+        this.destination = destination;
+        this.banner = banner;
         this.days = days;
         this.price = price;
     }
 
-    public String getPlace() {
-        return place;
+    public String getDestination() {
+        return destination;
     }
 
-    public String getImage() {
-        return image;
+    public String getBanner() {
+        return banner;
     }
 
     public int getDays() {
