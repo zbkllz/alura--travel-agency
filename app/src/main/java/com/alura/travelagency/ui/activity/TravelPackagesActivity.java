@@ -1,5 +1,6 @@
 package com.alura.travelagency.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class TravelPackagesActivity extends AppCompatActivity {
 
-    public static final String TITLE_APPBAR = "Packages";
+    public static final String TITLE_APPBAR = "Destinations";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +30,10 @@ public class TravelPackagesActivity extends AppCompatActivity {
         ListView packagesList = findViewById(R.id.lv_travel_pkg);
         List<TripPackage> packagesDeals = new PackageDAO().list();
         packagesList.setAdapter(new PackagesListAdapter(packagesDeals, this));
+        packagesList.setOnItemClickListener((adapterView, view, i, l) -> {
+            Intent intent = new Intent(TravelPackagesActivity.this,
+                    ResumePackageActivity.class);
+            startActivity(intent);
+        });
     }
 }

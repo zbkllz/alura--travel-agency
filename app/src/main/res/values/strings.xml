@@ -12,4 +12,9 @@
     <string name="yy">YY</string>
     <string name="mm">MM</string>
     <string name="cvc">CVC</string>
+    <string name="paymt_success">Congratulations!</string>
+    <string name="success_paymt_h2">You\'ve successfully booked this package 🤠</string>
+    <string name="booking_details">Booking Details</string>
+    <string name="congratulations">congratulations</string>
+    <string name="destination_image">destination image</string>
 </resources>

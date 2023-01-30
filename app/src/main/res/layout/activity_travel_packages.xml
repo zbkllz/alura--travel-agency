@@ -11,12 +11,12 @@
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:background="#6684e0"
+        android:contentDescription="@string/destination_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_travel_header_offering"

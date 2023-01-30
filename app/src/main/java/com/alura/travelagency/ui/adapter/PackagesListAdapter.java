@@ -9,11 +9,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.alura.travelagency.R;
+import com.alura.travelagency.model.TripPackage;
 import com.alura.travelagency.util.CurrencyUtil;
 import com.alura.travelagency.util.DaysUtil;
-import com.alura.travelagency.R;
 import com.alura.travelagency.util.ResUtil;
-import com.alura.travelagency.model.TripPackage;
 
 import java.util.List;
 

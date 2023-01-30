@@ -25,11 +25,12 @@
                 android:id="@+id/iv_item_place_pkg"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:contentDescription="@string/destination_image"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription"
                 tools:src="@sample/itempackages.json/packages/banner" />
 
             <TextView
@@ -39,7 +40,7 @@
                 android:layout_margin="8dp"
                 android:background="@android:drawable/screen_background_dark_transparent"
                 android:padding="8dp"
-                android:textColor="@android:color/white"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_item_place_pkg"

@@ -1,7 +1,10 @@
 package com.alura.travelagency.ui.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +21,7 @@ import java.math.BigDecimal;
 
 public class ResumePackageActivity extends AppCompatActivity {
 
-    public static final String TITLE_APPBAR = "Package Overview";
+    public static final String TITLE_APPBAR = "Overview";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,13 @@ public class ResumePackageActivity extends AppCompatActivity {
         showDays(pkgSp);
         showPrice(pkgSp);
         showDate(pkgSp);
+
+        Button btnBookPackage = findViewById(R.id.btn_resume_payment);
+        btnBookPackage.setOnClickListener(v -> {
+            Intent intent = new Intent(ResumePackageActivity.this,
+                    PaymentActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void showDate(TripPackage aPkg) {

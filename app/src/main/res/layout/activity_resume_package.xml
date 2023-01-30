@@ -9,20 +9,20 @@
         android:id="@+id/iv_resume_pkg_banner"
         android:layout_width="0dp"
         android:layout_height="140dp"
+        android:contentDescription="@string/destination_image"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="ContentDescription"
         tools:src="@drawable/sao_paulo_sp" />
 
     <View
         android:id="@+id/v_item_div"
         android:layout_width="0dp"
         android:layout_height="3dp"
-        android:background="@android:color/holo_orange_light"
+        android:background="@android:color/holo_orange_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_resume_pkg_banner"
@@ -81,6 +81,7 @@
         tools:text="R$ 243,99" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_resume_payment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
