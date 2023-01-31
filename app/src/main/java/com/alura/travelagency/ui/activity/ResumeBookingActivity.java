@@ -27,20 +27,20 @@ public class ResumeBookingActivity extends AppCompatActivity {
         setTitle(TITLE_APPBAR);
 
         TripPackage spPkg = new TripPackage("São Paulo", "sao_paulo_sp",
-                2, new BigDecimal("243,99"));
+                2, new BigDecimal("243.99"));
 
         showDestination(spPkg);
-        showPeriod(spPkg);
+        showDate(spPkg);
         showPlaceImg(spPkg);
         showPrice(spPkg);
-
     }
 
     private void showPrice(TripPackage aPkg) {
-        TextView resumePrice = findViewById(R.id.tv_resume_paymt_total);
+        TextView price = findViewById(R.id.tv_resume_paymt_total);
         String brlCurrency = CurrencyUtil.formattingModelCurrency(aPkg.getPrice());
-        resumePrice.setText(brlCurrency);
+        price.setText(brlCurrency);
     }
+
 
     private void showPlaceImg(TripPackage aPkg) {
         ImageView image = findViewById(R.id.iv_resume_paymt_destination_bn);
@@ -48,14 +48,15 @@ public class ResumeBookingActivity extends AppCompatActivity {
         image.setImageDrawable(resumeBanner);
     }
 
-    private void showPeriod(TripPackage aPkg) {
-        TextView resumePeriod = findViewById(R.id.tv_resume_paymt_period);
+    private void showDate(TripPackage aPkg) {
+        TextView date = findViewById(R.id.tv_resume_paymt_period);
         String periodAsTxt = DateUtil.periodTxt(aPkg.getDays());
-        resumePeriod.setText(periodAsTxt);
+        date.setText(periodAsTxt);
     }
 
     private void showDestination(TripPackage aPkg) {
         TextView resumeDestination = findViewById(R.id.tv_resume_paymt_destination);
         resumeDestination.setText(aPkg.getDestination());
     }
+
 }
