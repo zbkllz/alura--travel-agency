@@ -1,5 +1,6 @@
 package com.alura.travelagency.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;

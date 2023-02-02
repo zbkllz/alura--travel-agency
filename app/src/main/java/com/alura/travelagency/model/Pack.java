@@ -1,14 +1,15 @@
 package com.alura.travelagency.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class TripPackage {
+public class Pack implements Serializable {
     private final String destination;
     private final String banner;
     private final int days;
     private final BigDecimal price;
 
-    public TripPackage(String destination, String banner, int days, BigDecimal price) {
+    public Pack(String destination, String banner, int days, BigDecimal price) {
         this.destination = destination;
         this.banner = banner;
         this.days = days;
