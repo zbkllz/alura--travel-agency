@@ -1,5 +1,7 @@
 package com.alura.travelagency.ui.activity;
 
+import static com.alura.travelagency.ui.activity.ConstsActivity.PACKAGE_KEY;
+
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -24,27 +26,39 @@ public class PackageOverviewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_package_overview);
-
         setTitle(TITLE_APPBAR);
+        packageOverView();
+    }
 
+    private void packageOverView() {
         Intent intent = getIntent();
-        if (intent.hasExtra("pack")) {
-            final Pack pack = (Pack) intent.getSerializableExtra("pack");
-
-            showDestination(pack);
-            showPlaceImg(pack);
-            showDays(pack);
-            showPrice(pack);
-            showDate(pack);
-
-            Button btnBookPackage = findViewById(R.id.btn_resume_payment);
-            btnBookPackage.setOnClickListener(view -> {
-                Intent intentPayment = new Intent(PackageOverviewActivity.this,
-                        PaymentActivity.class);
-                intentPayment.putExtra("pack", pack);
-                startActivity(intentPayment);
-            });
+        if (intent.hasExtra(PACKAGE_KEY)) {
+            final Pack pack = (Pack) intent.getSerializableExtra(PACKAGE_KEY);
+            initFields(pack);
+            btnConfig(pack);
         }
+    }
+
+    private void btnConfig(Pack pack) {
+        Button btnBookPackage = findViewById(R.id.btn_resume_payment);
+        btnBookPackage.setOnClickListener(view -> {
+            goPay(pack);
+        });
+    }
+
+    private void initFields(Pack pack) {
+        showDestination(pack);
+        showPlaceImg(pack);
+        showDays(pack);
+        showPrice(pack);
+        showDate(pack);
+    }
+
+    private void goPay(Pack pack) {
+        Intent intentPayment = new Intent(PackageOverviewActivity.this,
+                PaymentActivity.class);
+        intentPayment.putExtra("pack", pack);
+        startActivity(intentPayment);
     }
 
     private void showDate(Pack pack) {

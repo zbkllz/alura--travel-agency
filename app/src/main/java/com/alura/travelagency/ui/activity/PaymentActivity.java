@@ -19,23 +19,31 @@ public class PaymentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
-
         setTitle(TITLE_APPBAR);
+        paymentCheckout();
+    }
 
+    private void paymentCheckout() {
         Intent intent = getIntent();
         if (intent.hasExtra("pack")) {
             final Pack pack = (Pack) intent.getSerializableExtra("pack");
-
             showPrice(pack);
-
-            Button btnPaymentPackage = findViewById(R.id.btn_checkout_payment);
-            btnPaymentPackage.setOnClickListener(view -> {
-                Intent intentBookingResume = new Intent(PaymentActivity.this,
-                        BookingResumeActivity.class);
-                intentBookingResume.putExtra("pack", pack);
-                startActivity(intentBookingResume);
-            });
+            btnConfig(pack);
         }
+    }
+
+    private void btnConfig(Pack pack) {
+        Button btnPaymentPackage = findViewById(R.id.btn_checkout_payment);
+        btnPaymentPackage.setOnClickListener(view -> {
+            goResume(pack);
+        });
+    }
+
+    private void goResume(Pack pack) {
+        Intent intentBookingResume = new Intent(PaymentActivity.this,
+                BookingResumeActivity.class);
+        intentBookingResume.putExtra("pack", pack);
+        startActivity(intentBookingResume);
     }
 
     private void showPrice(Pack pack) {

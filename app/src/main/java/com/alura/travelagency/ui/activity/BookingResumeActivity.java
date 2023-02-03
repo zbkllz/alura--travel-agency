@@ -22,13 +22,14 @@ public class BookingResumeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_resume);
-
         setTitle(TITLE_APPBAR);
+        resumeFields();
+    }
 
+    private void resumeFields() {
         Intent intent = getIntent();
         if (intent.hasExtra("pack")) {
             final Pack pack = (Pack) intent.getSerializableExtra("pack");
-
             showDestination(pack);
             showDate(pack);
             showPlaceImg(pack);
@@ -36,7 +37,7 @@ public class BookingResumeActivity extends AppCompatActivity {
         }
     }
 
-    private void showPrice(Pack pack ){
+    private void showPrice(Pack pack) {
         TextView price = findViewById(R.id.tv_resume_paymt_total);
         String brlCurrency = CurrencyUtil.formattingModelCurrency(pack.getPrice());
         price.setText(brlCurrency);
